@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<CommandsVisibility>
+		<Command name="Document.ОсуществитьОплату.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПередатьПоказания.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.УстановитьТарифы.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.ПоказанияРегистр.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.Тарифы.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.ТарифыПеременные.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.Водоотведение.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="AccumulationRegister.ПлатежиКвартира.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="Document.ОсуществитьОплату.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Документы</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Document.ПередатьПоказания.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Документы</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Document.УстановитьТарифы.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Документы</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="InformationRegister.ПоказанияРегистр.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыСведений</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="InformationRegister.Тарифы.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыСведений</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="InformationRegister.ТарифыПеременные.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыСведений</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="InformationRegister.Водоотведение.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыСведений</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="AccumulationRegister.ПлатежиКвартира.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыНакопления</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Document.ОсуществитьОплату.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Документы</CommandGroup>
+		</Command>
+		<Command name="Document.ПередатьПоказания.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Документы</CommandGroup>
+		</Command>
+		<Command name="Document.УстановитьТарифы.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.Документы</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.ПоказанияРегистр.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыСведений</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.Тарифы.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыСведений</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.ТарифыПеременные.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыСведений</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.Водоотведение.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыСведений</CommandGroup>
+		</Command>
+		<Command name="AccumulationRegister.ПлатежиКвартира.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.РегистрыНакопления</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>CommandGroup.Документы</Group>
+		<Group>CommandGroup.РегистрыСведений</Group>
+		<Group>CommandGroup.РегистрыНакопления</Group>
+	</GroupsOrder>
+</CommandInterface>

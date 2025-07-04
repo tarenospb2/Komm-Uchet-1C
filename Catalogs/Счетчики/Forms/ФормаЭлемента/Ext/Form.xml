@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Префикс" id="50">
+			<DataPath>Объект.Префикс</DataPath>
+			<Enabled>false</Enabled>
+			<ContextMenu name="ПрефиксКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="ПрефиксРасширеннаяПодсказка" id="52"/>
+		</InputField>
+		<InputField name="МестоУстановки" id="7">
+			<DataPath>Объект.МестоУстановки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="МестоУстановкиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="МестоУстановкиРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ТипСчетчика" id="10">
+			<DataPath>Объект.ТипСчетчика</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипСчетчикаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипСчетчикаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="КрайняяДатаПередачиПоказаний" id="13">
+			<DataPath>Объект.КрайняяДатаПередачиПоказаний</DataPath>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КрайняяДатаПередачиПоказанийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КрайняяДатаПередачиПоказанийРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<UsualGroup name="ПаспортГруппа" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Паспорт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Паспорт группа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ExtendedTooltip name="ПаспортГруппаРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<InputField name="ПаспортСтрока" id="45">
+					<DataPath>ПаспортСтрока</DataPath>
+					<ContextMenu name="ПаспортСтрокаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ПаспортСтрокаРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<Button name="ДобавитьПаспорт" id="41">
+					<Type>UsualButton</Type>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.ДобавитьПаспорт</CommandName>
+					<ExtendedTooltip name="ДобавитьПаспортРасширеннаяПодсказка" id="42"/>
+				</Button>
+				<Button name="ОткрытьПаспорт" id="48">
+					<Type>UsualButton</Type>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.ОткрытьПаспорт</CommandName>
+					<ExtendedTooltip name="ОткрытьПаспортРасширеннаяПодсказка" id="49"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Поверки" id="16">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Поверки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПоверкиКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="ПоверкиКоманднаяПанель" id="18"/>
+			<ExtendedTooltip name="ПоверкиРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="ПоверкиСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>Поверки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоверкиСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ПоверкиСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПоверкиСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>Поверки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоверкиСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ПоверкиСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПоверкиУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>Поверки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоверкиУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ПоверкиУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПоверкиНомерСтроки" id="29">
+					<DataPath>Объект.Поверки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоверкиНомерСтрокиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПоверкиНомерСтрокиРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<InputField name="ПоверкиДатаПоверки" id="32">
+					<DataPath>Объект.Поверки.ДатаПоверки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоверкиДатаПоверкиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПоверкиДатаПоверкиРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ПоверкиСрокСледующейПоверки" id="35">
+					<DataPath>Объект.Поверки.СрокСледующейПоверки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоверкиСрокСледующейПоверкиКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПоверкиСрокСледующейПоверкиРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<CheckBoxField name="ПоверкиПервичная" id="38">
+					<DataPath>Объект.Поверки.Первичная</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоверкиПервичнаяКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПоверкиПервичнаяРасширеннаяПодсказка" id="40"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Счетчики</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПаспортСтрока" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Паспорт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьПаспорт" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить паспорт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить паспорт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьПаспорт</Action>
+		</Command>
+		<Command name="ОткрытьПаспорт" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть паспорт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть паспорт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПаспорт</Action>
+		</Command>
+	</Commands>
+</Form>

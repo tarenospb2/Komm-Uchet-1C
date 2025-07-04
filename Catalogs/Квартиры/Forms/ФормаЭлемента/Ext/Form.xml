@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Адрес" id="87">
+			<DataPath>Объект.Адрес</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="АдресКонтекстноеМеню" id="88"/>
+			<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="89"/>
+		</InputField>
+		<CheckBoxField name="ПередаватьДанные" id="90">
+			<DataPath>Объект.ПередаватьДанные</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПередаватьДанныеКонтекстноеМеню" id="91"/>
+			<ExtendedTooltip name="ПередаватьДанныеРасширеннаяПодсказка" id="92"/>
+			<Events>
+				<Event name="OnChange">ПередаватьДанныеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="Обменник" id="93">
+			<DataPath>Объект.Клиент</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="ОбменникКонтекстноеМеню" id="94"/>
+			<ExtendedTooltip name="ОбменникРасширеннаяПодсказка" id="95"/>
+		</InputField>
+		<Pages name="Страницы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<Page name="ГруппаСчетчики" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счетчики</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСчетчикиРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<Table name="Счетчики" id="11">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Счетчики</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СчетчикиКонтекстноеМеню" id="12"/>
+							<AutoCommandBar name="СчетчикиКоманднаяПанель" id="13"/>
+							<ExtendedTooltip name="СчетчикиРасширеннаяПодсказка" id="14"/>
+							<SearchStringAddition name="СчетчикиСтрокаПоиска" id="15">
+								<AdditionSource>
+									<Item>Счетчики</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СчетчикиСтрокаПоискаКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="СчетчикиСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СчетчикиСостояниеПросмотра" id="18">
+								<AdditionSource>
+									<Item>Счетчики</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СчетчикиСостояниеПросмотраКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="СчетчикиСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СчетчикиУправлениеПоиском" id="21">
+								<AdditionSource>
+									<Item>Счетчики</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СчетчикиУправлениеПоискомКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="СчетчикиУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СчетчикиНомерСтроки" id="24">
+									<DataPath>Объект.Счетчики.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СчетчикиНомерСтрокиКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="СчетчикиНомерСтрокиРасширеннаяПодсказка" id="26"/>
+								</LabelField>
+								<InputField name="СчетчикиСчетчик" id="27">
+									<DataPath>Объект.Счетчики.Счетчик</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СчетчикиСчетчикКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="СчетчикиСчетчикРасширеннаяПодсказка" id="29"/>
+								</InputField>
+								<InputField name="СчетчикиТипТарифа" id="30">
+									<DataPath>Объект.Счетчики.ТипТарифа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СчетчикиТипТарифаКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="СчетчикиТипТарифаРасширеннаяПодсказка" id="32"/>
+								</InputField>
+								<InputField name="СчетчикиРесурсоснабжающаяОрганизация" id="33">
+									<DataPath>Объект.Счетчики.РесурсоснабжающаяОрганизация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СчетчикиРесурсоснабжающаяОрганизацияКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="СчетчикиРесурсоснабжающаяОрганизацияРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<CheckBoxField name="СчетчикиТолькоПоказания" id="96">
+									<DataPath>Объект.Счетчики.ТолькоПоказания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СчетчикиТолькоПоказанияКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="СчетчикиТолькоПоказанияРасширеннаяПодсказка" id="98"/>
+								</CheckBoxField>
+								<CheckBoxField name="СчетчикиВАрхиве" id="36">
+									<DataPath>Объект.Счетчики.ВАрхиве</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СчетчикиВАрхивеКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="СчетчикиВАрхивеРасширеннаяПодсказка" id="38"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОбслуживание" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обслуживание</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаОбслуживаниеРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<Table name="Обслуживание" id="41">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Обслуживание</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОбслуживаниеКонтекстноеМеню" id="42"/>
+							<AutoCommandBar name="ОбслуживаниеКоманднаяПанель" id="43"/>
+							<ExtendedTooltip name="ОбслуживаниеРасширеннаяПодсказка" id="44"/>
+							<SearchStringAddition name="ОбслуживаниеСтрокаПоиска" id="45">
+								<AdditionSource>
+									<Item>Обслуживание</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбслуживаниеСтрокаПоискаКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="ОбслуживаниеСтрокаПоискаРасширеннаяПодсказка" id="47"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбслуживаниеСостояниеПросмотра" id="48">
+								<AdditionSource>
+									<Item>Обслуживание</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбслуживаниеСостояниеПросмотраКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="ОбслуживаниеСостояниеПросмотраРасширеннаяПодсказка" id="50"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбслуживаниеУправлениеПоиском" id="51">
+								<AdditionSource>
+									<Item>Обслуживание</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбслуживаниеУправлениеПоискомКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="ОбслуживаниеУправлениеПоискомРасширеннаяПодсказка" id="53"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОбслуживаниеНомерСтроки" id="54">
+									<DataPath>Объект.Обслуживание.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбслуживаниеНомерСтрокиКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ОбслуживаниеНомерСтрокиРасширеннаяПодсказка" id="56"/>
+								</LabelField>
+								<InputField name="ОбслуживаниеТипТарифа" id="57">
+									<DataPath>Объект.Обслуживание.ТипТарифа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбслуживаниеТипТарифаКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ОбслуживаниеТипТарифаРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="ОбслуживаниеРесурсоснабжающаяОрганизация" id="60">
+									<DataPath>Объект.Обслуживание.РесурсоснабжающаяОрганизация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбслуживаниеРесурсоснабжающаяОрганизацияКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ОбслуживаниеРесурсоснабжающаяОрганизацияРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<CheckBoxField name="ОбслуживаниеТолькоПоказания" id="99">
+									<DataPath>Объект.Обслуживание.ТолькоПоказания</DataPath>
+									<Enabled>false</Enabled>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбслуживаниеТолькоПоказанияКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ОбслуживаниеТолькоПоказанияРасширеннаяПодсказка" id="101"/>
+								</CheckBoxField>
+								<CheckBoxField name="ОбслуживаниеВАрхиве" id="63">
+									<DataPath>Объект.Обслуживание.ВАрхиве</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбслуживаниеВАрхивеКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ОбслуживаниеВАрхивеРасширеннаяПодсказка" id="65"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИпотека" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ипотека</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаИпотекаРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<Table name="Ипотека" id="68">
+							<Representation>List</Representation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИпотекаКонтекстноеМеню" id="69"/>
+							<AutoCommandBar name="ИпотекаКоманднаяПанель" id="70"/>
+							<ExtendedTooltip name="ИпотекаРасширеннаяПодсказка" id="71"/>
+							<SearchStringAddition name="ИпотекаСтрокаПоиска" id="72">
+								<AdditionSource>
+									<Item>Ипотека</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИпотекаСтрокаПоискаКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ИпотекаСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИпотекаСостояниеПросмотра" id="75">
+								<AdditionSource>
+									<Item>Ипотека</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИпотекаСостояниеПросмотраКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="ИпотекаСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИпотекаУправлениеПоиском" id="78">
+								<AdditionSource>
+									<Item>Ипотека</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИпотекаУправлениеПоискомКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="ИпотекаУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ИпотекаПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ИпотекаНомерСтроки" id="81">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИпотекаНомерСтрокиКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ИпотекаНомерСтрокиРасширеннаяПодсказка" id="83"/>
+								</LabelField>
+								<InputField name="ИпотекаИпотечнаяОрганизация" id="84">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИпотекаИпотечнаяОрганизацияКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ИпотекаИпотечнаяОрганизацияРасширеннаяПодсказка" id="86"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Квартиры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
